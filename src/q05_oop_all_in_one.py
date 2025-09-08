@@ -1,5 +1,19 @@
-# Combined OOP exercise demonstrating various OOP concepts
-# Including: encapsulation, class methods, magic methods, composition
+# TODO (combined OOP exercise):
+# Build a small library domain:
+# 1) Class Price(value: float, currency: str="INR")
+#    - __post_init__ style validation in __init__
+#    - __repr__/__str__ to show "INR 499.00"
+# 2) Class Book(title, author, price: Price)
+#    - __eq__ compares title+author
+#    - classmethod from_dict(d: dict) -> Book
+# 3) Class Inventory:
+#    - holds books (composition) in a list
+#    - add_book(book), remove_book(title, author)
+#    - find_by_author(author) -> list[Book]
+#    - __len__ returns count, __iter__ yields books
+# Demo:
+# - Create 3 books via from_dict, add to inventory, print all (uses __str__)
+# - Remove one, print length, print books by a specific author.
 
 class Price:
     def __init__(self, value: float, currency: str = "INR"):

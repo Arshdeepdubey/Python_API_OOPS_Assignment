@@ -31,14 +31,13 @@ def print_details(obj):
     """Print details of any book type object that has get_details() method"""
     try:
         details = obj.get_details()
-        print("\n" + "="*50)
+        print("\n")
         print(f"Type: {details['type']}")
         print(f"Title: {details['title']}")
         print(f"Author: {details['author']}")
         print(f"Price: {details['price']}")
         if 'format' in details:
             print(f"Format: {details['format']}")
-        print("="*50)
     except AttributeError:
         print("Error: Object doesn't have required get_details() method")
 
@@ -55,10 +54,3 @@ if __name__ == "__main__":
     print("Demonstrating Polymorphism with Different Book Types:")
     for book in books:
         print_details(book)
-    
-    # Demonstrate duck typing - print_details works with any object that has get_details()
-    print("\nTrying with invalid object:")
-    try:
-        print_details("Not a book object")
-    except AttributeError as e:
-        print(f"Error: {e}")

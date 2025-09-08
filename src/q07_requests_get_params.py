@@ -6,29 +6,19 @@ import requests
 import json
 
 def main():
-    # Define the URL and parameters
     url = "https://jsonplaceholder.typicode.com/comments"
     params = {
         "postId": 1
     }
-    
-    # Make GET request with parameters
-    response = requests.get(url, params=params)
-    
-    # Check if request was successful
+    response = requests.get(url, params=params)  
     if response.status_code == 200:
-        # Parse JSON response
         comments = response.json()
         
-        # Print the total number of comments
         print(f"Total comments found: {len(comments)}")
-        
-        # Print first 2 comments with pretty formatting
         print("\nFirst 2 comments:")
         for comment in comments[:2]:
-            # Use json.dumps with indent for pretty printing
             print(json.dumps(comment, indent=2))
-            print("-" * 50)  # Separator between comments
+            print("#" * 50)
     else:
         print(f"Error: {response.status_code}")
         print(f"Message: {response.text}")

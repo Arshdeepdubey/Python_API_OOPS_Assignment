@@ -19,4 +19,3 @@ if __name__ == "__main__":
     book_1.get_details()
     book_2.get_details()
     book_3.get_details()
-    

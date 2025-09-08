@@ -28,6 +28,6 @@ if __name__ == "__main__":
     book_1 = Book(price)
     discount = float(input('enter the valid discount for price (0.1-0.9): '))
     book_1.get_discount = discount  # Use property assignment, not method call
-    print(f"Original price: ${book_1.price:.2f}")
-    print(f"Discount: {book_1.get_discount*100}%")
-    print(f"Final price: ${book_1.get_price_after_discount():.2f}")
+    print(f"Original price: ${book_1.price}")
+    print(f"Discount: {book_1.get_discount}%")
+    print(f"Final price: ${book_1.get_price_after_discount()}")

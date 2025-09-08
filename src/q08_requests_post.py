@@ -7,21 +7,14 @@ import requests
 import json
 
 def main():
-    # Define URL and request body
     url = "https://jsonplaceholder.typicode.com/posts"
     data = {
         "title": "OOPs Assignment",
         "body": "Learning Python requests",
-        "userId": 101
+        "userId": 1001
     }
-    
-    # Make POST request
     response = requests.post(url, json=data)
-    
-    # Print status code
     print(f"Status Code: {response.status_code}")
-    
-    # Print response JSON
     if response.status_code in [200, 201]:
         result = response.json()
         print("\nResponse:")

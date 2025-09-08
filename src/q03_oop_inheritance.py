@@ -27,12 +27,11 @@ class EBook(Book):
         return f"{base_details}, File Size: {self.file_size:.1f}MB"
 
 if __name__ == "__main__":
-    # Create an ebook instance
     digital_book = EBook(
-        title="Python Programming",
+        title="Programming",
         author="John Smith",
-        price=29.99,
-        file_size=2.5
+        price=29.50,
+        file_size=2.9
     )
     
     # Print book details
